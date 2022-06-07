@@ -120,19 +120,29 @@ include("config.php");
           </tr>
       </thead>
       <tbody>
-          <tr>
-              <td scope="row">SHAFFA</td>
-              <td>243423</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-              <td>43</td>
-            </tr>
 
+     
+
+
+
+      <?php 
+       $fetch = $con->query("SELECT * FROM `record`");
+      foreach($fetch as $row){
+
+    ?>
+          <tr>
+              <td scope="row"><?= $row['StudentName'] ?></td>
+              <td><?= $row['StudentId'] ?></td>
+              <td><?= $row['Math'] ?></td>
+              <td><?= $row['Islamiat'] ?></td>
+              <td><?= $row['Physics'] ?></td>
+              <td><?= $row['Urdu'] ?></td>
+              <td><?= $row['English'] ?></td>
+              <td><?= $row['TotalMarks'] ?></td>
+              <td><?= $row['ObtainedMarks'] ?></td>
+              <td><?= $row['Percentage'] ?></td>
+            </tr>
+    <?php  }  ?>
       </tbody>
   </table>
 
