@@ -28,10 +28,13 @@ if(isset($_GET['id'])){
   <body>
       
   <div class="container ">
-  <form action="session6.php" method="POST" >
+  <form action="update.php" method="POST" >
 
+
+  <input type="hidden" name="id" value="<?= $data['Id'] ?>">
 
 <div class="row mt-3">
+
 
 <div class="col col-md-6">
 <div class="form-group">
@@ -43,7 +46,7 @@ if(isset($_GET['id'])){
 <div class="col col-md-6">
 <div class="form-group">
         <label for="">Student ID :</label>
-        <input type="text" value="<?= $data['StudentId'] ?>"  name="id" class="form-control" >
+        <input type="text" value="<?= $data['StudentId'] ?>"  name="sid" class="form-control" >
         
     </div>
 </div>
